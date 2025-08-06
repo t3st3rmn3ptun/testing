@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/ee02f76094.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+        /*font-family: "Winky Rough", sans-serif;*/
+
+        .kontenjer{
+            background:linear-gradient(180deg,rgba(0,96,225,0.8)0%, rgba(0,61,119,0.7) 100%),
+            url(background.jpg);
+            background-repeat:repeat-y;
+            background-size: contain;
+        }
+        .bigtitle, .underttitle, .podnaslovna{
+            font-family: "Winky Rough", sans-serif;
+
+        }
+        
+        .kocka{
+            background-image: url(chalkboard.jpg);
+            background-size: cover;
+            border: 5px solid yellow;
+            font-family: "Winky Rough", sans-serif;
+            color:white;
+            box-shadow:0 0 10px black;
+        }
+        .notebook{
+            background-image:url(notebook.jpg);
+            background-size:cover;
+            border:1px solid lightgray;
+            box-shadow:0 0 5px black;
+            color:blue;
+            font-family: "Winky Rough", sans-serif;
+        }
+    </style>
+    <div class="kontenjer flex flex-col justify-center items-center w-full h-fit gap-30" data-aos="fade-up">
+        <div class="header flex flex-col justify-center items-center w-full min-h-[400px] rounded-3xl" data-aos="fade-up" >
+            <div class="bigtitle p-4 text-white text-[100px] md:text-[150px] font-black text-center">Back to school!</div>
+            <div class="underttitle p-4 text-white text-[30px] text-center">Find Your Perfect Laptop</div>
+            <div class="podnaslovna p-4 text-white text-[20px] text-center">Confused by specs, brands, and buzzwords? You’re not alone.</div>
+            <div class="tekst p-4 text-white text-[18px] max-w-[600px] text-center">Whether you're working, gaming, creating, or just browsing, choosing the right laptop doesn’t have to be hard. We’ve simplified the decision-making process—so you can find the device that actually fits your life and budget.</div>
+        </div>
+        <div class="kontent w-full md:w-[1500px] h-fit mb-10 flex flex-col md:grid-cols-2" data-aos="fade-up">
+            <div class="column1 min-h-[700px] w-full flex flex-col justify-start items-center">
+                <div class="kocka w-[90%] md:w-[400px] h-[450px] rounded-2xl flex flex-col p-5 justify-center items-center text-center text-[24px]" data-aos="fade-right">
+                    <span class="text-[36px]">Processor</span>
+                    The processor is the brain of your laptop. For most people, Intel Core i5/i7 or AMD Ryzen 5/7 offers the best balance between speed and value. Creators and gamers might need more powerful chips.
+                </div>
+            </div>
+            <div class="column2 min-h-[700px] w-full flex flex-col justify-end items-center">
+                <div class="notebook w-[90%] md:w-[450px] h-[450px] rounded-2xl flex flex-col p-5 justify-center items-center text-center text-[24px]">
+                    <span class="text-[36px]">Display</span>
+                    For most users, a Full HD (1080p) screen offers crisp visuals. Creators should look for higher resolution (2K or 4K) and color-accurate displays like OLED or IPS panels.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
