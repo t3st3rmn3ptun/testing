@@ -10,55 +10,115 @@
 </head>
 <body>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
         /*font-family: "Winky Rough", sans-serif;*/
 
         .kontenjer{
-            background:linear-gradient(180deg,rgba(0,96,225,0.8)0%, rgba(0,61,119,0.7) 100%),
+            background:linear-gradient(180deg,rgba(0, 71, 165, 0.7)0%, rgba(0, 20, 39, 1) 100%),
             url(./background.jpg);
             background-repeat:repeat-y;
-            background-size: contain;
-        }
-        .bigtitle, .underttitle, .podnaslovna{
-            font-family: "Winky Rough", sans-serif;
-
-        }
-        
-        .kocka{
-            background-image: url(./chalkboard.jpg);
             background-size: cover;
-            border: 5px solid yellow;
-            font-family: "Winky Rough", sans-serif;
-            color:white;
-            box-shadow:0 0 10px black;
         }
-        .notebook{
+        .tekst, .kockite{
+            background:linear-gradient(180deg,rgba(0, 120, 218, 0.637)0%, rgba(0, 41, 80, 0.7) 100%);
+            background-repeat:repeat-y;
+            background-size: cover;
+        }
+        .bigtitle{
+            font-family: "Winky Rough", sans-serif;
+        }
+        .podtitulla{
+            font-family: "Shantell Sans", cursive;
+        }
+        .tekst, .kockite{
+            border: 3px solid rgba(255, 0, 234, 0.7);
+            box-shadow:0 0 5px rgba(255, 0, 234, 0.7);
+        }
+      
+        
+       
+        .ram{
             background-image:url(./notebook.jpg);
             background-size:cover;
             border:1px solid lightgray;
             box-shadow:0 0 5px black;
             color:blue;
-            font-family: "Winky Rough", sans-serif;
+            font-family: "Shantell Sans", cursive;
+        }
+        .procesor{
+            background:linear-gradient(180deg, rgba(0,0,0,0.9)0%, rgba(0, 5, 77, 0.5)100%);
+            color:lime;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .gpu{
+            background-image: url(./chalkboard.jpg);
+            background-size: cover;
+            border:10px solid burlywood;
+            font-family: "Shantell Sans", cursive;
+        }
+        .baterija{
+            background:linear-gradient(180deg, rgba(0,0,0,0.9)0%, rgba(0, 5, 77, 0.5)100%),
+            url(./blueprint.png)
+        }
+        .ekran{
+            background:linear-gradient(180deg, rgba(0,0,0,0.7)0%, rgba(0, 5, 77, 0.5)100%),
+            url(./acrylic.png);
+            font-family: "Shantell Sans", cursive;
+        }
+        .memorija{
+            background:linear-gradient(180deg, rgba(0,0,0,0.7)0%, rgba(0, 5, 77, 0.5)100%),
+            url(./chip.png);
+            font-family:'Courier New', Courier, monospace;
         }
     </style>
-    <div class="kontenjer flex flex-col justify-center items-center w-full h-fit gap-30" data-aos="fade-up">
-        <div class="header flex flex-col justify-center items-center w-full min-h-[400px] rounded-3xl" data-aos="fade-up" >
-            <div class="bigtitle p-4 text-white text-[100px] md:text-[150px] font-black text-center">Back to school!</div>
-            <div class="underttitle p-4 text-white text-[30px] text-center">Find Your Perfect Laptop</div>
-            <div class="podnaslovna p-4 text-white text-[20px] text-center">Confused by specs, brands, and buzzwords? You’re not alone.</div>
-            <div class="tekst p-4 text-white text-[18px] max-w-[600px] text-center">Whether you're working, gaming, creating, or just browsing, choosing the right laptop doesn’t have to be hard. We’ve simplified the decision-making process—so you can find the device that actually fits your life and budget.</div>
+    <div class="kontenjer flex flex-col justify-center items-center w-full h-fit gap-30" >
+        <div class="headeros w-full h-[600px] md:h-[100vh] flex flex-col justify-center items-center">
+            <div class="bigtitle text-white text-[200px]">Back to school</div>
+            <div class="podtitulla text-white text-[100px] font-semibold mb-12">ОСТАНИ COOL!</div>
+            <div class="tekst w-full md:w-[800px] p-4 rounded-3xl">
+            <div class="shortquestion text-white text-[45px] font-bold text-center p-4">Дали си сигурен дека знаеш што точно ти треба?</div>
+            <div class="shortintro text-white text-[22px] font-bold text-center p-4">Дали го користиш лаптопот само за сурфање и гледање филмови, или ти треба нешто посериозно за работа, програмирање, графички дизајн или гејминг? Со денешниот огромен избор на модели, брендови и спецификации, изборот на точниот лаптоп може да изгледа збунувачки. Но, не грижи се — со правилни информации, лесно ќе го најдеш оној што е идеален за тебе.</div>
         </div>
-        <div class="kontent w-full md:w-[1500px] h-fit mb-10 flex flex-col md:grid-cols-2 md:grid" data-aos="fade-up">
-            <div class="column1 min-h-[700px] w-full flex flex-col justify-start items-center">
-                <div class="kocka w-[90%] md:w-[400px] h-[450px] rounded-2xl flex flex-col p-5 justify-center items-center text-center text-[24px]" data-aos="fade-right">
-                    <span class="text-[36px]">Processor</span>
-                    The processor is the brain of your laptop. For most people, Intel Core i5/i7 or AMD Ryzen 5/7 offers the best balance between speed and value. Creators and gamers might need more powerful chips.
-                </div>
+        </div>
+        <div class="mejn flex flex-col w-full min-h-[800px] p-6 rounded-xl">
+            <div class="intromejn h-1/4 w-full flex flex-col justify-start items-center">
+                <div class="introtitle text-white text-[32px] font-bold p-4">Што ќе дознаеш подолу?</div>
+                <div class="introtekst text-white text-[22px] text-center p-4 md:w-[600px]">Ќе ги разгледаме шесте најважни фактори што треба да ги земеш предвид пред да купиш лаптоп, за да не направиш скап пропуст.</div>
             </div>
-            <div class="column2 min-h-[700px] w-full flex flex-col justify-end items-center">
-                <div class="notebook w-[90%] md:w-[450px] h-[450px] rounded-2xl flex flex-col p-5 justify-center items-center text-center text-[24px]">
-                    <span class="text-[36px]">Display</span>
-                    For most users, a Full HD (1080p) screen offers crisp visuals. Creators should look for higher resolution (2K or 4K) and color-accurate displays like OLED or IPS panels.
+            <div class="kontenjermejn h-3/4 w-full flex justify-center items-center p-4  m-2">
+                <div class="kockite max-w-full md:max-w-[1450px] flex justify-center items-center flex-wrap gap-3 p-4 h-fit rounded-3xl">
+                    <div class="kocka procesor w-[455px] bg-black h-[300px] text-white rounded-3xl flex flex-col justify-center items-center">
+                        <div class="modultitulla text-[22px] p-4 font-bold ">Процесор</div>
+                        <div class="modultekstos text-[18px] p-4 text-center">Процесорот ја одредува брзината и моќта на лаптопот. Intel i5 или Ryzen 5 се добра средина, додека за потешки задачи се препорачуваат i7 или Ryzen 7.</div>
+                         
+                           
+                    </div>
+                    <div class="kocka ram w-[455px] bg-black h-[300px] text-white rounded-3xl flex flex-col justify-center items-center">
+                        <div class="modultitulla text-[22px] p-4 font-bold">RAM меморија</div>
+<div class="modultekstos text-[18px] p-4 text-center">За денешни услови, 8GB е минимум за стабилна работа. Ако работиш со повеќе апликации истовремено или користиш побарани програми – оди на 16GB или повеќе.</div>
+
+                            
+                    </div>
+                    <div class="kocka gpu w-[455px] bg-black h-[300px] text-white rounded-3xl flex flex-col justify-center items-center">
+                        <div class="modultitulla text-[22px] p-4 text-center font-bold">Графичка картичка</div>
+<div class="modultekstos text-[18px] p-4 text-center">Ако работиш со дизајн, видео уредување или игри, ти треба лаптоп со дискретна графичка картичка (на пр. NVIDIA GeForce). За обична канцелариска работа, сурфање и филмови – интегрираната графика ќе заврши работа.</div>
+
+                    </div>
+                    <div class="kocka memorija w-[455px] bg-black h-[300px] text-white rounded-3xl flex flex-col justify-center items-center">
+                        <div class="modultitulla text-[22px] p-4 text-center font-bold">Складирање (SSD vs HDD)</div>
+<div class="modultekstos text-[18px] p-4 text-center">SSD е брз и сигурен избор – лаптопот ќе се вклучува побрзо и ќе реагира побрзо. Минимум 256GB SSD е препорачливо, но ако имаш многу податоци, избери 512GB или 1TB.</div>
+
+                    </div>
+                    <div class="kocka ekran w-[455px] bg-black h-[300px] text-white rounded-3xl flex flex-col justify-center items-center">
+                        <div class="modultitulla text-[22px] p-4 text-center font-bold">Екран</div>
+                        <div class="modultekstos text-[18px] p-4 text-center">Големината и квалитетот на екранот влијаат на искуството. Full HD (1080p) е стандард, а 13-14 инчи се идеални за мобилност, додека 15.6 инчи се популарен избор за работа и мултимедија.</div>
+                        
+                    </div>
+                    <div class="kocka baterija w-[455px] bg-black h-[300px] text-white rounded-3xl flex flex-col justify-center items-center">
+                        <div class="modultitulla text-[22px] p-4 text-center font-bold">Батерија и тежина</div>
+                        <div class="modultekstos text-[18px] p-4 text-center">Ако често патуваш или работиш од различни локации, бирај лесен лаптоп со батерија што трае најмалку 8 часа. За статична употреба, овие фактори се помалку важни, но сè уште вредат да се проверат.</div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
