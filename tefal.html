@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/ee02f76094.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+
+        }
+        body{
+            margin: 0;
+            height:fit-content;
+            width: 100%;
+        }
+        
+        
+        .produkt:hover{
+            border: 1px solid #ee2c43;
+        }
+        .kategorija:hover{
+            background-color: #c02235;
+        }
+        .kontenjer{
+            background: linear-gradient(#801723,#ee2c43);
+        }
+        
+    </style>
+    <div class="header h-30 w-full bg-blue-800 flex flex-col justify-center items-center">
+        <div class="header1 h-10 w-full bg-white"></div>
+        <div class="header2 h-20 w-full text-white font-bold text-4xl flex justify-center items-center">NEPTUN</div>
+    </div>
+    <div class="kontenjer flex flex-col justify-center items-center w-full h-fit">
+        <div class="herobanner flex justify-center items-center h-[300px] text-[50px] text-white">
+            Tefal Store powered by Neptun(Kreativa od Dizajn)
+        </div>
+        <div class="brendovi flex justify-center items-center rounded-3xl bg-white p-10 h-fit w-fit gap-10 mb-10">
+            <div class="brand  w-[200px] h-[200px] text-[#ee2c43] flex justify-center items-center rounded-3xl shadow-lg">
+                <img src="./tefal_logo.svg" alt="" class="w-3/4">
+            </div>
+            <div class="brand brand  w-[200px] h-[200px] text-[#ee2c43] flex justify-center items-center rounded-3xl shadow-lg">
+                <img src="./wmf_logo.svg" alt="" class="w-3/4">
+            </div>
+            <div class="brand brand  w-[200px] h-[200px] text-[#ee2c43] flex justify-center items-center rounded-3xl shadow-lg">
+                <img src="./krups_logo.svg" alt="" class="w-3/4">
+            </div>
+        </div>
+        <div class="kategoriite flex justify-center items-center rounded-3xl bg-white p-10 h-fit w-fit gap-10 mb-10">
+            <div class="wrapper flex flex-col justify-center items-center gap-5">
+            <div class="kategorija w-[150px] h-[150px] text-[white] flex justify-center items-center rounded-full bg-[#ee2c43] font-black"><i class="fa-solid fa-kitchen-set fa-2xl"></i></div>
+            <div class="categoryname font-bold text-[#ee2c43]">Kујнски сетови</div>
+            </div>
+            <div class="wrapper flex flex-col justify-center items-center gap-5">
+                <div class="kategorija w-[150px] h-[150px] text-[white] flex justify-center items-center rounded-full bg-[#ee2c43] font-black"><i class="fa-solid fa-utensils fa-2xl"></i></div>
+                <div class="categoryname font-bold text-[#ee2c43]">Кујнски прибор</div>
+                </div>
+                <div class="wrapper flex flex-col justify-center items-center gap-5">
+                    <div class="kategorija w-[150px] h-[150px] text-[white] flex justify-center items-center rounded-full bg-[#ee2c43] font-black"><i class="fa-solid fa-mug-hot fa-2xl"></i></div>
+                    <div class="categoryname font-bold text-[#ee2c43]">Кафемати</div>
+                    </div>
+                    <div class="wrapper flex flex-col justify-center items-center gap-5">
+                        <div class="kategorija w-[150px] h-[150px] text-[white] flex justify-center items-center rounded-full bg-[#ee2c43] font-black"><i class="fa-solid fa-bowl-rice fa-2xl"></i></div>
+                        <div class="categoryname font-bold text-[#ee2c43] text-center">Air Fryer</div>
+                        </div>
+                        <div class="wrapper flex flex-col justify-center items-center gap-5">
+                            <div class="kategorija w-[150px] h-[150px] text-[white] flex justify-center items-center rounded-full bg-[#ee2c43] font-black"><i class="fa-solid fa-kitchen-set fa-2xl"></i></div>
+                            <div class="categoryname font-bold text-[#ee2c43]">Kitchen Set</div>
+                            </div>
+                            <div class="wrapper flex flex-col justify-center items-center gap-5">
+                                <div class="kategorija w-[150px] h-[150px] text-[white] flex justify-center items-center rounded-full bg-[#ee2c43] font-black"><i class="fa-solid fa-kitchen-set fa-2xl"></i></div>
+                                <div class="categoryname font-bold text-[#ee2c43]">Kitchen Set</div>
+                                </div>
+
+            
+        </div>
+        <div class="produktite flex justify-center items-center rounded-3xl bg-white p-10 h-fit max-w-[1550px] gap-10 flex-wrap">
+            <div class="produkt w-[250px] h-[350px] block rounded-xl shadow-lg p-2 transition-color duration-300">
+                <p class="text-sm text-gray-500 py-2">Air Fryer</p>
+                <div class="imgwrapper h-[210px] w-full p-1  flex justify-center items-center">
+                    <img src="./airfryer.png" alt="" class="scale-90">
+                </div>
+                <h1 class="text-lg text-[#ee2c43] p-2 font-bold">Product Name</h1>
+                <div class="call-to-action w-full flex justify-between items-center px-2">
+                    <h1 class="text-md text-[#ee2c43] font-bold w-1/2">4999ден</h1>
+                    <div class="icon rounded-full bg-[#ee2c43]/20 w-10 h-10 flex justify-center items-center p-2">
+                        <img src="./shoppingcarticon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="produkt w-[250px] h-[350px] block rounded-xl shadow-lg p-2 transition-color duration-300">
+                <p class="text-sm text-gray-500 py-2">Air Fryer</p>
+                <div class="imgwrapper h-[210px] w-full p-1  flex justify-center items-center">
+                    <img src="./airfryer.png" alt="" class="scale-90">
+                </div>
+                <h1 class="text-lg text-[#ee2c43] p-2 font-bold">Product Name</h1>
+                <div class="call-to-action w-full flex justify-between items-center px-2">
+                    <h1 class="text-md text-[#ee2c43] font-bold w-1/2">4999ден</h1>
+                    <div class="icon rounded-full bg-[#ee2c43]/20 w-10 h-10 flex justify-center items-center p-2">
+                        <img src="./shoppingcarticon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="produkt w-[250px] h-[350px] block rounded-xl shadow-lg p-2 transition-color duration-300">
+                <p class="text-sm text-gray-500 py-2">Air Fryer</p>
+                <div class="imgwrapper h-[210px] w-full p-1  flex justify-center items-center">
+                    <img src="./airfryer.png" alt="" class="scale-90">
+                </div>
+                <h1 class="text-lg text-[#ee2c43] p-2 font-bold">Product Name</h1>
+                <div class="call-to-action w-full flex justify-between items-center px-2">
+                    <h1 class="text-md text-[#ee2c43] font-bold w-1/2">4999ден</h1>
+                    <div class="icon rounded-full bg-[#ee2c43]/20 w-10 h-10 flex justify-center items-center p-2">
+                        <img src="./shoppingcarticon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="produkt w-[250px] h-[350px] block rounded-xl shadow-lg p-2 transition-color duration-300">
+                <p class="text-sm text-gray-500 py-2">Air Fryer</p>
+                <div class="imgwrapper h-[210px] w-full p-1  flex justify-center items-center">
+                    <img src="./airfryer.png" alt="" class="scale-90">
+                </div>
+                <h1 class="text-lg text-[#ee2c43] p-2 font-bold">Product Name</h1>
+                <div class="call-to-action w-full flex justify-between items-center px-2">
+                    <h1 class="text-md text-[#ee2c43] font-bold w-1/2">4999ден</h1>
+                    <div class="icon rounded-full bg-[#ee2c43]/20 w-10 h-10 flex justify-center items-center p-2">
+                        <img src="./shoppingcarticon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="produkt w-[250px] h-[350px] block rounded-xl shadow-lg p-2 transition-color duration-300">
+                <p class="text-sm text-gray-500 py-2">Air Fryer</p>
+                <div class="imgwrapper h-[210px] w-full p-1  flex justify-center items-center">
+                    <img src="./airfryer.png" alt="" class="scale-90">
+                </div>
+                <h1 class="text-lg text-[#ee2c43] p-2 font-bold">Product Name</h1>
+                <div class="call-to-action w-full flex justify-between items-center px-2">
+                    <h1 class="text-md text-[#ee2c43] font-bold w-1/2">4999ден</h1>
+                    <div class="icon rounded-full bg-[#ee2c43]/20 w-10 h-10 flex justify-center items-center p-2">
+                        <img src="./shoppingcarticon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="produkt w-[250px] h-[350px] block rounded-xl shadow-lg p-2 transition-color duration-300">
+                <p class="text-sm text-gray-500 py-2">Air Fryer</p>
+                <div class="imgwrapper h-[210px] w-full p-1  flex justify-center items-center">
+                    <img src="./airfryer.png" alt="" class="scale-90">
+                </div>
+                <h1 class="text-lg text-[#ee2c43] p-2 font-bold">Product Name</h1>
+                <div class="call-to-action w-full flex justify-between items-center px-2">
+                    <h1 class="text-md text-[#ee2c43] font-bold w-1/2">4999ден</h1>
+                    <div class="icon rounded-full bg-[#ee2c43]/20 w-10 h-10 flex justify-center items-center p-2">
+                        <img src="./shoppingcarticon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="produkt w-[250px] h-[350px] block rounded-xl shadow-lg p-2 transition-color duration-300">
+                <p class="text-sm text-gray-500 py-2">Air Fryer</p>
+                <div class="imgwrapper h-[210px] w-full p-1  flex justify-center items-center">
+                    <img src="./airfryer.png" alt="" class="scale-90">
+                </div>
+                <h1 class="text-lg text-[#ee2c43] p-2 font-bold">Product Name</h1>
+                <div class="call-to-action w-full flex justify-between items-center px-2">
+                    <h1 class="text-md text-[#ee2c43] font-bold w-1/2">4999ден</h1>
+                    <div class="icon rounded-full bg-[#ee2c43]/20 w-10 h-10 flex justify-center items-center p-2">
+                        <img src="./shoppingcarticon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="produkt w-[250px] h-[350px] block rounded-xl shadow-lg p-2 transition-color duration-300">
+                <p class="text-sm text-gray-500 py-2">Air Fryer</p>
+                <div class="imgwrapper h-[210px] w-full p-1  flex justify-center items-center">
+                    <img src="./airfryer.png" alt="" class="scale-90">
+                </div>
+                <h1 class="text-lg text-[#ee2c43] p-2 font-bold">Product Name</h1>
+                <div class="call-to-action w-full flex justify-between items-center px-2">
+                    <h1 class="text-md text-[#ee2c43] font-bold w-1/2">4999ден</h1>
+                    <div class="icon rounded-full bg-[#ee2c43]/20 w-10 h-10 flex justify-center items-center p-2">
+                        <img src="./shoppingcarticon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="produkt w-[250px] h-[350px] block rounded-xl shadow-lg p-2 transition-color duration-300">
+                <p class="text-sm text-gray-500 py-2">Air Fryer</p>
+                <div class="imgwrapper h-[210px] w-full p-1  flex justify-center items-center">
+                    <img src="./airfryer.png" alt="" class="scale-90">
+                </div>
+                <h1 class="text-lg text-[#ee2c43] p-2 font-bold">Product Name</h1>
+                <div class="call-to-action w-full flex justify-between items-center px-2">
+                    <h1 class="text-md text-[#ee2c43] font-bold w-1/2">4999ден</h1>
+                    <div class="icon rounded-full bg-[#ee2c43]/20 w-10 h-10 flex justify-center items-center p-2">
+                        <img src="./shoppingcarticon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="produkt w-[250px] h-[350px] block rounded-xl shadow-lg p-2 transition-color duration-300">
+                <p class="text-sm text-gray-500 py-2">Air Fryer</p>
+                <div class="imgwrapper h-[210px] w-full p-1  flex justify-center items-center">
+                    <img src="./airfryer.png" alt="" class="scale-90">
+                </div>
+                <h1 class="text-lg text-[#ee2c43] p-2 font-bold">Product Name</h1>
+                <div class="call-to-action w-full flex justify-between items-center px-2">
+                    <h1 class="text-md text-[#ee2c43] font-bold w-1/2">4999ден</h1>
+                    <div class="icon rounded-full bg-[#ee2c43]/20 w-10 h-10 flex justify-center items-center p-2">
+                        <img src="./shoppingcarticon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
