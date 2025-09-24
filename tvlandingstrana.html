@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .landing-module {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 1200px;
+            width: 100%;
+            min-height: 600px;
+        }
+
+        .main-container {
+            display: flex;
+            gap: 40px;
+            height: 100%;
+            min-height: 500px;
+        }
+
+        .left-column {
+            flex: 0 0 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .right-column {
+            flex: 0 0 30%;
+            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .tv-section {
+            flex: 0 0 80%;
+            position: relative;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .tv-container {
+            position: relative;
+            transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+        }
+
+        .tv-screen {
+            width: 500px;
+            height: 300px;
+            background: linear-gradient(45deg, #232526 0%, #414345 100%);
+            border-radius: 10px;
+            border: 8px solid #2c2c2c;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tv-screen::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #00f2fe 0%, #4facfe 100%);
+            opacity: 0.8;
+            animation: screenGlow 2s ease-in-out infinite alternate;
+        }
+
+        .tv-stand {
+            width: 60px;
+            height: 30px;
+            background: #2c2c2c;
+            margin: 0 auto;
+            border-radius: 5px;
+            margin-top: -5px;
+        }
+
+        .tv-base {
+            width: 300px;
+            height: 20px;
+            background: #1a1a1a;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        .eyecatcher {
+            position: absolute;
+            top: -15px;
+            right: -10px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 22px;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            animation: pulse 2s infinite;
+            z-index: 10;
+        }
+
+        .slider-section {
+            flex: 0 0 20%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .value-slider {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px 0;
+        }
+
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: linear-gradient(to right, #ddd, #4facfe);
+            outline: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            appearance: none;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .slider::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider-label {
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .slider-value {
+            color: #4facfe;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .right-column h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .right-column p {
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            }
+        }
+
+        @keyframes screenGlow {
+            0% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 0.9;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .left-column, .right-column {
+                flex: 1;
+            }
+            
+            .landing-module {
+                padding: 20px;
+            }
+            
+            .tv-screen {
+                width: 250px;
+                height: 167px;
+            }
+        }
+    
+    </style>
+    <div class="module">
+        <div class="main-container">
+            <div class="left-column">
+                <div class="tv-section">
+                    <div class="tv-container" id="tvContainer">
+                        <div class="tv-screen">
+                            <div class="eyecatcher" id="eyecatcher">50</div>
+                        </div>
+                        <div class="tv-stand"></div>
+                        <div class="tv-base"></div>
+                    </div>
+                </div>
+                
+                <div class="slider-section">
+                    <div class="slider-label">Далечина од софа до тв: (во m)
+                    </div>
+                    <div class="value-slider">
+                        <input type="range" min="1" max="20" value="3" class="slider" id="valueSlider">
+                    </div>
+                    <div class="slider-value" id="sliderValue">3m</div>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <h2>Premium TV Experience</h2>
+                <p>Transform your viewing experience with our cutting-edge smart TV technology. Enjoy crystal-clear picture quality and immersive entertainment.</p>
+                
+                <ul class="feature-list">
+                    <li>4K Ultra HD Resolution</li>
+                    <li>Smart TV Platform</li>
+                    <li>HDR Technology</li>
+                    <li>Voice Control</li>
+                    <li>Streaming Apps Built-in</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const slider = document.getElementById('valueSlider');
+        const sliderValue = document.getElementById('sliderValue');
+        const eyecatcher = document.getElementById('eyecatcher');
+        const tvContainer = document.getElementById('tvContainer');
+
+        slider.addEventListener('input', function() {
+            const value = this.value;
+            calculated=(value*39.37)/1.6
+            calculated=parseInt(calculated);
+            // Update the displayed values
+            sliderValue.textContent = value;
+            eyecatcher.textContent = calculated + `"`;
+            
+            // Scale the TV based on slider value (10-100 maps to 0.7-1.3 scale)
+            const scale = 0.7 + (value - 10) * (1.3 - 0.7) / (100 - 10);
+            tvContainer.style.transform = `scale(${scale})`;
+            
+            // Update eyecatcher color based on value
+            const hue = (value - 10) * 120 / 90; // 0-120 degrees (red to green)
+            eyecatcher.style.background = `linear-gradient(45deg, hsl(${hue}, 70%, 60%), hsl(${hue + 20}, 70%, 50%))`;
+        });
+
+        // Initialize with default value
+        slider.dispatchEvent(new Event('input'));
+    </script>
+</body>
+</html>

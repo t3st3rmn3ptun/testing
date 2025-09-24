@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Specifications</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .product-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .spec-table {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .spec-header {
+            background: linear-gradient(135deg, #87cfeb4f, #4683b470);
+            color: #555;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 16px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .spec-row {
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+            background: white;
+            transition: background-color 0.2s ease;
+        }
+
+        .spec-row:hover {
+            background-color: #f8f9fa;
+        }
+
+        .spec-row:last-child {
+            border-bottom: none;
+        }
+
+        .spec-key {
+            flex: 1;
+            padding: 12px 20px;
+            font-weight: 600;
+            color: #555;
+            background-color: #f9f9f9;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .spec-value {
+            flex: 2;
+            padding: 12px 20px;
+            color: #333;
+        }
+
+        .specs-container {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            .spec-row {
+                flex-direction: column;
+            }
+
+            .spec-key {
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+                border-radius: 0;
+            }
+
+            .spec-value {
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product-title">AMD Processor</div>
+        
+        <div id="specifications" class="specs-container show">
+            <!-- Specifications will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <script>
+        // Sample JSON data
+        const productData = {
+            
+            
+  "општи_податоци": {
+    "Име": "AMD Ryzen™ 7 9800X3D",
+    "Форм_фактор": "Десктоп, Кутија со процесор",
+    "Пазарен_сегмент": "Ентузијастички десктоп",
+    "AMD PRO Технологии": "Не",
+    "Претходно_име": "Granite Ridge AM5"
+  },
+  "архитектура": {
+    "Архитектура": "Zen 5",
+    "Број_на_јадра": 8,
+    "Мултитрединг_(SMT)": "Да",
+    "Број_на_нишки": 16,
+    "Макс._брзина_на_такт": "До 5.2 GHz",
+    "Базна_брзина_на_такт": "4.7 GHz",
+    "L1 Кеш": "640 KB",
+    "L2 Кеш": "8 MB",
+    "L3 Кеш": "96 MB",
+    "Стандардна_TDP": "120W",
+    "Технологија_на_процесорот_за_јадра": "TSMC 4nm FinFET",
+    "Технологија_на_процесорот_за_I/O_чип": "TSMC 6nm FinFET",
+    "Број_на_чипови_во_пакување": 2,
+    "Отклучено_за_оверклокинг": "Да"
+  },
+  "функции": {
+    "AMD EXPO™ Технологија_за_оверклокинг_на_меморија": "Да",
+    "Precision Boost Overdrive": "Да",
+    "Напони_за_оптимизација_на_кривата": "Да",
+    "Поддршка_за_AMD Ryzen™ Master": "Да",
+    "Сокет_на_процесорот": "AM5",
+    "Поддржани_чипсети": "A620, X670E, X670, B650E, B650, X870E, X870, B840, B850",
+    "Технологија_за_повишување_на_процесорот": "Precision Boost 2",
+    "Инструкциски_сет": "x86-64",
+    "Поддржани_екстензии": "AES, AMD-V, AVX, AVX2, AVX512, FMA3, MMX-plus, SHA, SSE, SSE2, SSE3, SSE4.1, SSE4.2, SSE4A, SSSE3"
+  },
+  "ладење": {
+    "Термално_решение_(PIB)": "Не_е_вклучено",
+    "Препорачан_ладилник": "Препорачан_течен_ладилник_за_оптимални_перформанси",
+    "Макс._работна_температура_(Tjmax)": "95°C"
+  },
+  "влез/излез": {
+    "Native USB 3.2 Gen 2 (10Gbps)": 4,
+    "Native USB 2.0 (480Mbps)": 1,
+    "Верзија_на_PCI Express®": "PCIe® 5.0",
+    "Native PCIe® Линии_(Вкупно/Искористиви)": "28, 24",
+    "Поддршка_за_NVMe": "Boot, RAID0, RAID1, RAID5, RAID10"
+  },
+  "меморија": {
+    "Тип_на_системска_меморија": "DDR5",
+    "Мемориски_канали": 2,
+    "Макс._меморија": "192 GB",
+    "Подтип_на_системска_меморија": "UDIMM",
+    "Макс._брзина_на_меморија": "DDR5-5600 (2x1R, 2x2R), DDR5-3600 (4x1R, 4x2R)",
+    "Поддршка_за_ECC": "Да_(Потребно_е_поддршка_од_основната_плата)"
+  },
+  "графика": {
+    "Модел_на_графика": "AMD Radeon™ Graphics",
+    "Број_на_графички_јадра": 2,
+    "Графичка_фреквенција": "2200 MHz",
+    "USB Type-C® DisplayPort™ Алтернативен_режим": "Да"
+  }
+
+
+
+
+        };
+
+        // Auto-display specifications on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            displaySpecs();
+        });
+
+        function displaySpecs() {
+            const container = document.getElementById('specifications');
+            container.innerHTML = '';
+
+            // Iterate through each parent object in the JSON
+            Object.keys(productData).forEach(category => {
+                // Create the spec table div
+                const specTable = document.createElement('div');
+                specTable.className = 'spec-table';
+
+                // Create header with category name
+                const header = document.createElement('div');
+                header.className = 'spec-header';
+                header.textContent = category;
+                specTable.appendChild(header);
+
+                // Get the nested object
+                const categoryData = productData[category];
+
+                // Create rows for each key-value pair in the category
+                Object.keys(categoryData).forEach(key => {
+                    const row = document.createElement('div');
+                    row.className = 'spec-row';
+
+                    const keyDiv = document.createElement('div');
+                    keyDiv.className = 'spec-key';
+                    keyDiv.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+
+                    const valueDiv = document.createElement('div');
+                    valueDiv.className = 'spec-value';
+                    valueDiv.textContent = categoryData[key];
+
+                    row.appendChild(keyDiv);
+                    row.appendChild(valueDiv);
+                    specTable.appendChild(row);
+                });
+
+                container.appendChild(specTable);
+            });
+
+            // Show the specifications container
+            container.classList.add('show');
+        }
+
+        // Function to load external JSON data (for when you have dynamic data)
+        function loadExternalData(jsonData) {
+            // Replace the sample data with your external JSON
+            Object.assign(productData, jsonData);
+            displaySpecs();
+        }
+
+        // Example of how to use with external data:
+        // loadExternalData(yourJsonData);
+    </script>
+</body>
+</html>

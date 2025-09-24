@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Specifications</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .product-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .spec-table {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .spec-header {
+            background: linear-gradient(135deg, #87cfeb4f, #4683b470);
+            color: #555;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 16px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .spec-row {
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+            background: white;
+            transition: background-color 0.2s ease;
+        }
+
+        .spec-row:hover {
+            background-color: #f8f9fa;
+        }
+
+        .spec-row:last-child {
+            border-bottom: none;
+        }
+
+        .spec-key {
+            flex: 1;
+            padding: 12px 20px;
+            font-weight: 600;
+            color: #555;
+            background-color: #f9f9f9;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .spec-value {
+            flex: 2;
+            padding: 12px 20px;
+            color: #333;
+        }
+
+        .specs-container {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            .spec-row {
+                flex-direction: column;
+            }
+
+            .spec-key {
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+                border-radius: 0;
+            }
+
+            .spec-value {
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product-title">PHILIPS MG 3945/15</div>
+        
+        <div id="specifications" class="specs-container show">
+            <!-- Specifications will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <script>
+        // Sample JSON data
+        const productData = {
+            "Функции": {
+                "тип": "9-во-1 тример за лице, коса и тело"
+            },
+            "Должини на сечење": {
+                "мин": "0.5 mm",
+                "макс": "12 mm",
+                "прецизност": "1 mm"
+            },
+            "Алатки": {
+                "број": "9"
+            },
+            "Сечила": {
+                "тип": "самоострачувачки, со заоблени врвови"
+            },
+            "Чешли": {
+                "за": "брада, коса, тело, интимни делови"
+            },
+            "Нос и уши": {
+                "тип": "специјализиран тример"
+            },
+            "Рачка": {
+                "материал": "ергономски дизајн"
+            },
+            "Водоотпорност": {
+                "ниво": "глави за перење под вода"
+            },
+            "Батерија": {
+                "траење": "до 90 минути",
+                "полнење": "4 часа (USB-A, не вклучува адаптер)"
+            },
+            "Индикатори": {
+                "тип": "LED индикатор за полнење и ниска батерија"
+            },
+            "Додатоци": {
+                "вклучени": "четка за чистење, торбичка за патување"
+            },
+            "Боја": {
+                "боја": "црна"
+            }
+        };
+
+        // Auto-display specifications on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            displaySpecs();
+        });
+
+        function displaySpecs() {
+            const container = document.getElementById('specifications');
+            container.innerHTML = '';
+
+            // Iterate through each parent object in the JSON
+            Object.keys(productData).forEach(category => {
+                // Create the spec table div
+                const specTable = document.createElement('div');
+                specTable.className = 'spec-table';
+
+                // Create header with category name
+                const header = document.createElement('div');
+                header.className = 'spec-header';
+                header.textContent = category;
+                specTable.appendChild(header);
+
+                // Get the nested object
+                const categoryData = productData[category];
+
+                // Create rows for each key-value pair in the category
+                Object.keys(categoryData).forEach(key => {
+                    const row = document.createElement('div');
+                    row.className = 'spec-row';
+
+                    const keyDiv = document.createElement('div');
+                    keyDiv.className = 'spec-key';
+                    keyDiv.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+
+                    const valueDiv = document.createElement('div');
+                    valueDiv.className = 'spec-value';
+                    valueDiv.textContent = categoryData[key];
+
+                    row.appendChild(keyDiv);
+                    row.appendChild(valueDiv);
+                    specTable.appendChild(row);
+                });
+
+                container.appendChild(specTable);
+            });
+
+            // Show the specifications container
+            container.classList.add('show');
+        }
+
+        // Function to load external JSON data (for when you have dynamic data)
+        function loadExternalData(jsonData) {
+            // Replace the sample data with your external JSON
+            Object.assign(productData, jsonData);
+            displaySpecs();
+        }
+
+        // Example of how to use with external data:
+        // loadExternalData(yourJsonData);
+    </script>
+</body>
+</html>
