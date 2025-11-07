@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .containeros{
+            background: linear-gradient(135deg, #B3CCE6 0%, #FFD2BF 100%);
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+        .outsidewrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .innerwrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 1800px;
+        }
+        .herobanner{
+            width: 1600px;
+            height: 520px;
+            background-color: white;
+            margin:20px;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .infomodul{
+            width: 1400px;
+            height: fit-content;
+            display:flex;
+            
+            justify-content: center;
+            align-items: start;
+            padding: 40px;
+            gap: 30px;
+        }
+    
+        .accordion {
+            width: 420px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+    
+        .accordion-header {
+            background: #003D77;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bolder;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+    
+        .accordion-header:hover {
+            background: #004b92;
+        }
+    
+        .accordion-content {
+            background: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.4s ease;
+            padding: 0 20px;
+        }
+    
+        .accordion-content.open {
+            padding: 20px;
+        }
+    
+        .accordion-content p {
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+    
+        .accordion-content ol {
+            margin-top: 10px;
+            color: #333;
+        }
+    
+        /* Icon now placed below content */
+        .accordion-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+    
+        .accordion-icon:hover {
+            background: #dbeaff;
+        }
+    
+        .accordion-icon img {
+            width: 18px;
+            height: 18px;
+            background: transparent;
+            border-radius: 50%;
+            padding: 6px;
+            transition: transform 0.3s ease;
+        }
+    
+        .rotating {
+            transform: rotate(360deg);
+        }
+        .faktori{
+            width: 1200px;
+            height: 150px;
+            border-radius: 40px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-self:center;
+            align-self:center;
+        }
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    width: 1000px;
+    justify-self: center;
+    align-self: center;
+    margin:20px;
+    height:600px;
+    padding:30px;
+    border-radius: 40px;
+    background-color: #003D77;
+  }
+  .item {
+    background-color: white;
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 150%;
+   
+  }
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .mobile-only {
+      display: none;
+    }
+    .desktop-only {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .item-0 {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+    
+    .item-1 {
+      grid-column: 1;
+      grid-row: 3 / span 2;
+    }
+    
+    .item-2 {
+      grid-column: 2;
+      grid-row: 2 / span 3;
+    }
+    
+    .item-3 {
+      grid-column: 2;
+      grid-row: 4;
+    }
+    
+    .item-4 {
+      grid-column: 2 / span 2;
+      grid-row: 1;
+    }
+    
+    .item-5 {
+      grid-column: 3;
+      grid-row: 2;
+    }
+    
+    .item-6 {
+      grid-column: 3;
+      grid-row: 3 / span 2;
+    }
+    
+  }
+  .faktoritekst{
+    padding: 0px;
+    width: 1200px;
+    
+    color: #333;
+    justify-self: center;
+    align-self: center;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .faktor-card{
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            padding: 20px;
+            color: #333;
+            border-radius: 20px;
+        }
+        .faktortitulla{
+            padding: 20px;
+            font-size: 18pt;
+            font-weight: bolder;
+            text-align: center;
+        }
+        .faktorp{
+            font-size: 14pt;
+            text-align: center;
+        }
+        .preporacani{
+            width: 1100px;
+            background: linear-gradient(180deg, #ffffff  0%, #e3f2fd 100%);
+            height: fit-content;
+            justify-self: center;
+            align-self:center;
+            padding-bottom: 30px;
+            margin: 50px;
+            border-radius:40px;
+        }
+        .tab-buttons {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      padding:20px 20px;
+    }
+
+    .tab-button {
+      padding: 10px 16px;
+      border: 0px;
+      background-color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      color:#333;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .tab-button.aktiv {
+      background: #004b9b;
+      color: #ffffff;
+      border-color: #004b9b;
+      font-weight: 600;
+      transition:ease-in-out;
+      transition-duration: 300ms;
+      transform: scale(105%);
+      
+    }
+
+    .tab-content {
+      display: none;
+      
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      
+      margin-top: 8px;
+    }
+    .product-card{
+            width: 240px;
+            height: 320px;
+            border-radius: 10px;
+            padding: 10px;
+            display: block;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .product-card:hover{
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            
+        }
+        .imagewrapper{
+            width: 100%;
+            height: 190px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .productTitle{
+            text-align:center;
+            color: #333;
+            font-weight:600;
+            font-size:14pt;
+            padding: 5px 10px;
+        }
+        .cenarow{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            height: fit-content;
+            margin:10px 0px;
+        }
+        .cenakey{
+            font-size:12pt;
+            color:#f15a22;
+        }
+        .cena{
+            font-size:14pt;
+            font-weight: 600;
+            color:#333;
+        }
+        .doznajpoveke{
+            justify-self:center;
+            align-self:center;
+            text-decoration: none;
+            padding: 8px 20px;
+            color:white;
+            background-color: #003d77;
+            width:fit-content;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            font-size:12pt;
+            border-radius: 20px;
+
+        }
+        .doznajpoveke:hover{
+            background-color:#f15a22;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-duration: 300ms;
+        }
+        .eyecatcher {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #f15a22;
+        color: #ffffff;
+        padding:10px;
+        font-size: 10pt;
+        font-weight: 600;
+        border-radius: 12px 12px 12px 12px;
+        line-height: 1.2;
+        text-align: left;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        max-width: fit-content;
+    }
+    .products{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+    .povekjeinformacikalk{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .leftist{
+        width: 50%;
+        padding: 20px 40px;
+        text-align: center;
+    }
+    .rightist{
+        padding: 30px;
+    }
+    .doplata-calculator {
+      width: 500px;
+      background: #ffffff;
+      padding: 20px 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
+
+    .doplata-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #003d77;
+      margin-bottom: 12px;
+    }
+
+    .doplata-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .doplata-label {
+      font-size: 11px;
+      color: #777777;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .doplata-input,
+    .doplata-fixed {
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      font-size: 14px;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    .doplata-input:focus {
+      border-color: #003d77;
+      box-shadow: 0 0 0 2px rgba(0,61,119,0.08);
+    }
+
+    .doplata-fixed {
+      background: #f7f7f7;
+      color: #444;
+    }
+
+    .doplata-result {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #f5f8fc;
+      font-size: 15px;
+      font-weight: 600;
+      color: #003d77; /* result color */
+      display: inline-block;
+      min-width: 60%;
+    }
+
+    .doplata-result span {
+      font-weight: 700;
+    }
+
+    .doplata-helper {
+      font-size: 10px;
+      color: #999999;
+      margin-top: 4px;
+    }
+    </style>
+    
+    <div class="containeros">
+        <div class="outsidewrapper">
+            <div class="innerwrapper">
+                <div class="herobanner">
+                    SLIKA OD DIZAJN 
+                    <img src="" alt="" id="heroBanner">
+                </div>
+                <div class="contentoros">
+                    <div class="infomodul">
+                        
+                        <!-- Accordion 1 -->
+                        <div class="accordion">
+                            <div class="accordion-header" id="toggleBtn1">
+                                Како да аплицирате?
+                            </div>
+                        
+                            <div class="accordion-content" id="contentBox1">
+                                <p>Следете ги овие едноставни чекори за да аплицирате за студентскиот ваучер:</p>
+                                <ol>
+                                    <li>Проверете дали сте редовен студент.</li>
+                                    <li>Посетете ја официјалната страница на програмата.</li>
+                                    <li>Пополнете ја апликацијата со вашите податоци.</li>
+                                    <li>Потврдете преку е-пошта и почекајте одговор.</li>
+                                </ol>
+                            </div>
+                        
+                            <div class="accordion-icon" id="iconBtn1">
+                                <img src="open.png" alt="arrow" id="arrowIcon1">
+                            </div>
+                        </div>
+    
+                        <!-- Accordion 2 -->
+                        <div class="accordion">
+                            <div class="accordion-header" id="toggleBtn2">
+                                Кој може да аплицира?
+                            </div>
+                        
+                            <div class="accordion-content" id="contentBox2">
+                                <p>Овој ваучер е достапен за:</p>
+                                <ul>
+                                    <li>Редовни студенти на јавни и приватни универзитети.</li>
+                                    <li>Студенти со активен статус за академската година 2025/2026.</li>
+                                    <li>Државјани кои ги исполнуваат критериумите на програмата.</li>
+                                </ul>
+                            </div>
+                        
+                            <div class="accordion-icon" id="iconBtn2">
+                                <img src="open.png" alt="arrow" id="arrowIcon2">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="faktori">
+                        klucni faktori pri izbor na kompjuter - kreativa od dizajn
+                        <img src="" alt="">
+                    </div>
+                    <div class="grid">
+                        <div class="item item-0 desktop-only">
+                            <img src="cpu.png" alt="" id="item" style="max-width: 80%">
+                        </div>
+                          <div class="item item-1 desktop-only">
+                            <img src="battery.png" alt="" id="item" style="max-width: 50%">
+                          </div>
+                          <div class="item item-2 desktop-only">
+                            <img src="monitor.png" alt="" id="item" style="max-width: 70%">
+                          </div>
+                          
+                          <div class="item item-4 desktop-only">
+                            <img src="ram.png" alt="" id="item" style="max-width: 50%;">
+                          </div>
+                          <div class="item item-5 desktop-only">
+                            <img src="gpu.png" alt="" id="item" style="max-width: 50%;">
+                          </div>
+                          <div class="item item-6 desktop-only">
+                            <img src="hdd.png" alt="" id="item" style="max-width: 40%;">
+                          </div>
+                          
+                      </div>
+                      <div class="faktoritekst">
+                        <div class="faktor-card">
+                            <div class="faktortitulla">CPU</div>
+                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
+                        </div>
+                        <div class="faktor-card">
+                            <div class="faktortitulla">RAM</div>
+                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
+                        </div>
+                        <div class="faktor-card">
+                            <div class="faktortitulla">GPU</div>
+                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
+                        </div>
+                        <div class="faktor-card">
+                            <div class="faktortitulla">Battery</div>
+                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
+                        </div>
+                        <div class="faktor-card">
+                            <div class="faktortitulla">Storage</div>
+                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
+                        </div>
+                        <div class="faktor-card">
+                            <div class="faktortitulla">Display</div>
+                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
+                        </div>
+                    </div>
+                    <div class="preporacani">
+                        <div class="tab-container">
+                            <div class="tab-buttons">
+                              <button class="tab-button" data-tab="tab1">ЗА АРХИТЕКТУРА</button>
+                              <button class="tab-button" data-tab="tab2">ЗА ГРАФИЧКИ ДИЗАЈН</button>
+                              <button class="tab-button" data-tab="tab3">ЗА ПРОГРАМИРАЊЕ</button>
+                              <button class="tab-button" data-tab="tab4">ЗА ЕКОНОМИЈА</button>
+                              <button class="tab-button" data-tab="tab5">ЗА ИНЖИНЕРСТВО</button>
+                            </div>
+                          
+                            <div id="tab1" class="tab-content">
+                            <div class="products">
+                                <div class="product-card">
+                                    <div class="imagewrapper">
+                                        <img src="laptop.png" alt="" class="photoimg" style="max-width: 90%;">
+                                    </div>
+                                    <div class="productTitle">Lenovo IdeaPad 3</div>
+                                    <div class="cenarow">
+                                        <div class="cenakey">haPPy цена:</div>
+                                        <div class="cena">23,999 ден</div>
+                                    </div>
+                                    <a href="" class="doznajpoveke">Дознај повеќе</a>
+                                </div>
+                                <div class="product-card">
+                                    <div class="imagewrapper">
+                                        <img src="laptop.png" alt="" class="photoimg" style="max-width: 90%;">
+                                    </div>
+                                    <div class="productTitle">Lenovo IdeaPad 3</div>
+                                    <div class="cenarow">
+                                        <div class="cenakey">haPPy цена:</div>
+                                        <div class="cena">33,999 ден</div>
+                                    </div>
+                                    <a href="" class="doznajpoveke">Дознај повеќе</a>
+                                </div>
+                                <div class="product-card">
+                                    <div class="imagewrapper">
+                                        <img src="laptop.png" alt="" class="photoimg" style="max-width: 90%;">
+                                    </div>
+                                    <div class="productTitle">Lenovo IdeaPad 3</div>
+                                    <div class="cenarow">
+                                        <div class="cenakey">haPPy цена:</div>
+                                        <div class="cena">18,999 ден</div>
+                                    </div>
+                                    <a href="" class="doznajpoveke">Дознај повеќе</a>
+                                </div>
+                                <div class="product-card">
+                                    <div class="imagewrapper">
+                                        <img src="laptop.png" alt="" class="photoimg" style="max-width: 90%;">
+                                    </div>
+                                    <div class="productTitle">Lenovo IdeaPad 3</div>
+                                    <div class="cenarow">
+                                        <div class="cenakey">haPPy цена:</div>
+                                        <div class="cena">21,999 ден</div>
+                                    </div>
+                                    <a href="" class="doznajpoveke">Дознај повеќе</a>
+                                </div>
+                            </div>    
+                            </div>
+                            
+                            <div id="tab2" class="tab-content">
+                              Content for Tab 2
+                            </div>
+                            <div id="tab3" class="tab-content">
+                              Content for Tab 3
+                            </div>
+                            <div id="tab4" class="tab-content">
+                              Content for Tab 4
+                            </div>
+                            <div id="tab5" class="tab-content">
+                              Content for Tab 5
+                            </div>
+                          </div>
+                          <div class="povekjeinformacikalk">
+                            <div class="leftist">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum velit recusandae voluptas, autem laboriosam alias cum ut ex officiis tempore aliquam explicabo eius? Debitis minima numquam omnis sit, vitae, ex eveniet distinctio quasi minus autem, laudantium corporis voluptas obcaecati nemo id qui ipsum officiis pariatur architecto iusto. Iure, voluptatum hic.
+                                <a href="" class="doznajpoveke" style="margin-top: 30px;">Види понуди</a>
+                            </div>
+                            <div class="rightist">
+                                <div class="doplata-calculator">
+                                    <div class="doplata-title">Калкулатор за доплата</div>
+                                  
+                                    <div class="doplata-row">
+                                      <label for="fullPrice" class="doplata-label">Вкупна цена</label>
+                                      <input
+                                        id="fullPrice"
+                                        class="doplata-input"
+                                        type="number"
+                                        min="0"
+                                        placeholder="Внеси вкупна цена (ден)"
+                                      />
+                                    </div>
+                                  
+                                    <div class="doplata-row">
+                                      <div class="doplata-label">Фиксна вредност</div>
+                                      <input
+                                        class="doplata-fixed"
+                                        type="text"
+                                        value="15,300 ден"
+                                        readonly
+                                      />
+                                    </div>
+                                  
+                                    <div id="doplataResult" class="doplata-result">
+                                      Доплата само од: <span>0 ден</span>
+                                    </div>
+                                    <div class="doplata-helper">
+                                      Формула: вкупна цена − 15.300 ден
+                                    </div>
+                                  </div>
+                                  
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    function setupAccordion(toggleId, contentId, iconBtnId, iconId) {
+        const header = document.getElementById(toggleId);
+        const content = document.getElementById(contentId);
+        const iconBtn = document.getElementById(iconBtnId);
+        const icon = document.getElementById(iconId);
+    
+        function toggleAccordion() {
+            const isOpen = content.classList.toggle('open');
+            content.style.maxHeight = isOpen ? content.scrollHeight + 'px' : 0;
+            icon.src = isOpen ? 'close.png' : 'open.png';
+            icon.alt = isOpen ? 'close icon' : 'expand icon';
+    
+            icon.classList.add('rotating');
+            setTimeout(() => icon.classList.remove('rotating'), 300);
+        }
+    
+        header.addEventListener('click', toggleAccordion);
+        iconBtn.addEventListener('click', toggleAccordion);
+    }
+    
+    // Setup both accordions
+    setupAccordion('toggleBtn1', 'contentBox1', 'iconBtn1', 'arrowIcon1');
+    setupAccordion('toggleBtn2', 'contentBox2', 'iconBtn2', 'arrowIcon2');
+
+    function initTabs() {
+    const buttons = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    // Default state: first button & first content
+    if (buttons.length && contents.length) {
+      buttons[0].classList.add('aktiv');
+      contents[0].style.display = 'block';
+    }
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.dataset.tab;
+
+        // Reset all buttons
+        buttons.forEach(btn => btn.classList.remove('aktiv'));
+
+        // Hide all content blocks
+        contents.forEach(content => {
+          content.style.display = 'none';
+        });
+
+        // Activate clicked button
+        button.classList.add('aktiv');
+
+        // Show relevant content
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.style.display = 'block';
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initTabs);
+  (function() {
+            const DIFFERENCE_BASE = 15300;
+    
+            function formatNumber(num) {
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+    
+            document.querySelectorAll('.product-card').forEach(card => {
+                const cenaEl = card.querySelector('.cena');
+                if (!cenaEl) return;
+    
+                // Extract numeric value from "23,999 ден"
+                const raw = cenaEl.textContent.replace(/[^\d]/g, '');
+                const price = parseInt(raw, 10);
+    
+                if (isNaN(price)) return;
+    
+                const diff = price - DIFFERENCE_BASE;
+                if (diff <= 0) return; // Optional: skip if not a positive доплата
+    
+                const eyecatcher = document.createElement('div');
+                eyecatcher.className = 'eyecatcher';
+                eyecatcher.textContent = 'Доплата само од: ' + formatNumber(diff) + ' ден';
+    
+                card.appendChild(eyecatcher);
+            });
+        })();
+        (function () {
+    const BASE_VALUE = 15300;
+    const input = document.getElementById('fullPrice');
+    const resultEl = document.getElementById('doplataResult').querySelector('span');
+
+    function formatNumber(num) {
+      return num
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
+    input.addEventListener('input', function () {
+      const raw = this.value;
+      const price = parseInt(raw, 10);
+
+      if (isNaN(price) || price <= BASE_VALUE) {
+        resultEl.textContent = "0 ден";
+        return;
+      }
+
+      const diff = price - BASE_VALUE;
+      resultEl.textContent = formatNumber(diff) + " ден";
+    });
+  })();
+</script>
+    </script>
+</body>
+</html>
