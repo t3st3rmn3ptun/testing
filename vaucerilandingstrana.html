@@ -56,7 +56,7 @@
         }
     
         .accordion {
-            width: 420px;
+            width: 700px;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -297,7 +297,7 @@
       
       font-family: Arial, sans-serif;
       font-size: 14px;
-      
+      padding:30px 50px;
       margin-top: 8px;
     }
     .product-card{
@@ -471,6 +471,42 @@
       color: #999999;
       margin-top: 4px;
     }
+    .accordionQuestion{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .accordionTitle{
+      color:#003D77;
+      font-weight: 600;
+      padding: 10px 20px;
+      font-size:14pt;
+    }
+    .accordionAnswer{
+      color:#333;
+      padding:10px 20px;
+      font-size:12pt;
+    }
+    .preporacaniIntro{
+      padding:30px 50px;
+      text-align: center;
+      font-size:14pt;
+      color:#003D77;
+      font-weight: 600;
+    }
+    .rodovi{
+      margin-top:20px;
+      
+    }
+    .prashanje{
+      padding:20px 0px;
+      font-size:14pt;
+      font-weight: 600;
+      color: #003D77;
+    }
+    .odgovor{
+      font-size:12pt;
+      color: #333;
+    }
     </style>
     
     <div class="containeros">
@@ -486,17 +522,44 @@
                         <!-- Accordion 1 -->
                         <div class="accordion">
                             <div class="accordion-header" id="toggleBtn1">
-                                Како да аплицирате?
+                                Најчесто поставувани прашања
                             </div>
                         
                             <div class="accordion-content" id="contentBox1">
-                                <p>Следете ги овие едноставни чекори за да аплицирате за студентскиот ваучер:</p>
-                                <ol>
-                                    <li>Проверете дали сте редовен студент.</li>
-                                    <li>Посетете ја официјалната страница на програмата.</li>
-                                    <li>Пополнете ја апликацијата со вашите податоци.</li>
-                                    <li>Потврдете преку е-пошта и почекајте одговор.</li>
-                                </ol>
+                                <div class="accordionQuestion">
+                                <div class="accordionTitle">Дали може да комбинирам 2 ваучери за еден производ?</div>
+                                <div class="accordionAnswer">Не, секој ваучер е издаден за лична употреба и може да се искористи само за еден конкретен уред. Не е дозволено спојување на два или повеќе ваучери за една иста набавка.</div>
+                                </div> 
+                                <div class="accordionQuestion">
+                                  <div class="accordionTitle">Дали може да купам два производи со еден ваучер?</div>
+                                  <div class="accordionAnswer">Не, вредноста на еден ваучер се применува само на еден производ. Доколку сакате да купите повеќе уреди, тие може да бидат на иста сметка, но попустот од ваучерот ќе важи само за еден од нив.</div>
+                                </div>
+                                <div class="accordionQuestion">
+                                  <div class="accordionTitle">Кои документи треба да ги донесам?</div>
+                                  <div class="accordionAnswer">Потребно е да ги имате следните документи:</div>
+                                  <ul>
+                                    <li>Ваучерот во електронска форма (го добивате по е-пошта)</li>
+                                    <li>Пополнета изјава (<a href="" style="color:#333;">достапна на линкот за превземање</a>)</li>
+                                    
+                                  </ul>
+                                </div>
+                                <div class="accordionQuestion">
+                                  <div class="accordionTitle">Дали може да доплатам за купување поскап уред?</div>
+                                  <div class="accordionAnswer">Да, можно е. Износот на ваучерот ќе се одземе од крајната цена на производот, а разликата ќе ја доплатите со начин на плаќање по ваш избор.</div>
+                                </div>
+                                <div class="accordionQuestion">
+                                  <div class="accordionTitle">За кои категории на уреди важи ваучерот?</div>
+                                  <div class="accordionAnswer">Ваучерите може да се искористат за:</div>
+                                  <ul>
+                                    <li>десктоп компјутери (комплетни конфигурации или All-in-one модели)</li>
+                                    <li>лаптопи</li>
+                                    <li>таблети</li>
+                                  </ul>
+                                </div>
+                                <div class="accordionQuestion">
+                                  <div class="accordionTitle">Дали со ваучерот може да купам компјутерски делови?</div>
+                                  <div class="accordionAnswer">Не, ваучерот не важи за поединечни компоненти или додатоци, туку само за целосни компјутерски конфигурации и готови уреди.</div>
+                                </div> 
                             </div>
                         
                             <div class="accordion-icon" id="iconBtn1">
@@ -505,152 +568,108 @@
                         </div>
     
                         <!-- Accordion 2 -->
-                        <div class="accordion">
-                            <div class="accordion-header" id="toggleBtn2">
-                                Кој може да аплицира?
-                            </div>
                         
-                            <div class="accordion-content" id="contentBox2">
-                                <p>Овој ваучер е достапен за:</p>
-                                <ul>
-                                    <li>Редовни студенти на јавни и приватни универзитети.</li>
-                                    <li>Студенти со активен статус за академската година 2025/2026.</li>
-                                    <li>Државјани кои ги исполнуваат критериумите на програмата.</li>
-                                </ul>
-                            </div>
-                        
-                            <div class="accordion-icon" id="iconBtn2">
-                                <img src="open.png" alt="arrow" id="arrowIcon2">
-                            </div>
-                        </div>
                         
                     </div>
                     <div class="faktori">
                         klucni faktori pri izbor na kompjuter - kreativa od dizajn
                         <img src="" alt="">
                     </div>
-                    <div class="grid">
-                        <div class="item item-0 desktop-only">
-                            <img src="cpu.png" alt="" id="item" style="max-width: 80%">
-                        </div>
-                          <div class="item item-1 desktop-only">
-                            <img src="battery.png" alt="" id="item" style="max-width: 50%">
-                          </div>
-                          <div class="item item-2 desktop-only">
-                            <img src="monitor.png" alt="" id="item" style="max-width: 70%">
-                          </div>
-                          
-                          <div class="item item-4 desktop-only">
-                            <img src="ram.png" alt="" id="item" style="max-width: 50%;">
-                          </div>
-                          <div class="item item-5 desktop-only">
-                            <img src="gpu.png" alt="" id="item" style="max-width: 50%;">
-                          </div>
-                          <div class="item item-6 desktop-only">
-                            <img src="hdd.png" alt="" id="item" style="max-width: 40%;">
-                          </div>
-                          
-                      </div>
-                      <div class="faktoritekst">
-                        <div class="faktor-card">
-                            <div class="faktortitulla">CPU</div>
-                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
-                        </div>
-                        <div class="faktor-card">
-                            <div class="faktortitulla">RAM</div>
-                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
-                        </div>
-                        <div class="faktor-card">
-                            <div class="faktortitulla">GPU</div>
-                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
-                        </div>
-                        <div class="faktor-card">
-                            <div class="faktortitulla">Battery</div>
-                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
-                        </div>
-                        <div class="faktor-card">
-                            <div class="faktortitulla">Storage</div>
-                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
-                        </div>
-                        <div class="faktor-card">
-                            <div class="faktortitulla">Display</div>
-                            <div class="faktorp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil impedit eligendi officia in, ex earum mollitia aliquid est aut a totam aperiam eaque quis molestias doloremque. Praesentium fugiat earum quos. Modi sapiente numquam vitae pariatur beatae tempore neque veniam ea exercitationem recusandae, harum expedita maxime temporibus accusantium ullam dignissimos.</div>
-                        </div>
-                    </div>
+                    
+                     
                     <div class="preporacani">
+                        <div class="preporacaniIntro">Изборот на совршениот уред може да биде навистина заморен. Толку многу модели, спецификации и опции — а ти сакаш само уред кој ќе ги следи твоите академски предизвици без застој. Не грижи се — ние сме тука за тебе!</div>
                         <div class="tab-container">
                             <div class="tab-buttons">
-                              <button class="tab-button" data-tab="tab1">ЗА АРХИТЕКТУРА</button>
-                              <button class="tab-button" data-tab="tab2">ЗА ГРАФИЧКИ ДИЗАЈН</button>
-                              <button class="tab-button" data-tab="tab3">ЗА ПРОГРАМИРАЊЕ</button>
-                              <button class="tab-button" data-tab="tab4">ЗА ЕКОНОМИЈА</button>
-                              <button class="tab-button" data-tab="tab5">ЗА ИНЖИНЕРСТВО</button>
+                              <button class="tab-button" data-tab="tab1">АРХИТЕКТУРА</button>
+                              <button class="tab-button" data-tab="tab2">ГРАФИЧКИ ДИЗАЈН</button>
+                              <button class="tab-button" data-tab="tab3">ПРОГРАМИРАЊЕ</button>
+                              <button class="tab-button" data-tab="tab4">БИЗНИС/ЕКОНОМИЈА/ПРАВЕН</button>
+                              
                             </div>
                           
                             <div id="tab1" class="tab-content">
-                            <div class="products">
-                                <div class="product-card">
-                                    <div class="imagewrapper">
-                                        <img src="laptop.png" alt="" class="photoimg" style="max-width: 90%;">
-                                    </div>
-                                    <div class="productTitle">Lenovo IdeaPad 3</div>
-                                    <div class="cenarow">
-                                        <div class="cenakey">haPPy цена:</div>
-                                        <div class="cena">23,999 ден</div>
-                                    </div>
-                                    <a href="" class="doznajpoveke">Дознај повеќе</a>
+                                <div class="rodovi">
+                                  <div class="prashanje">Препорачан процесор</div>
+                                  <div class="odgovor">Intel Core i7 или AMD Ryzen 7 — потребна е поголема моќ за 3D-моделирање, CAD софтвер и визуелизации.</div>
                                 </div>
-                                <div class="product-card">
-                                    <div class="imagewrapper">
-                                        <img src="laptop.png" alt="" class="photoimg" style="max-width: 90%;">
-                                    </div>
-                                    <div class="productTitle">Lenovo IdeaPad 3</div>
-                                    <div class="cenarow">
-                                        <div class="cenakey">haPPy цена:</div>
-                                        <div class="cena">33,999 ден</div>
-                                    </div>
-                                    <a href="" class="doznajpoveke">Дознај повеќе</a>
+                                <div class="rodovi">
+                                  <div class="prashanje">RAM меморија</div>
+                                  <div class="odgovor">Минимум 16 GB, идеално 32 GB доколку користиш комплексни модели или рендерираш.</div>
                                 </div>
-                                <div class="product-card">
-                                    <div class="imagewrapper">
-                                        <img src="laptop.png" alt="" class="photoimg" style="max-width: 90%;">
-                                    </div>
-                                    <div class="productTitle">Lenovo IdeaPad 3</div>
-                                    <div class="cenarow">
-                                        <div class="cenakey">haPPy цена:</div>
-                                        <div class="cena">18,999 ден</div>
-                                    </div>
-                                    <a href="" class="doznajpoveke">Дознај повеќе</a>
+                                <div class="rodovi">
+                                  <div class="prashanje">Складиште</div>
+                                  <div class="odgovor">SSD од најмалку 512 GB, бидејќи графички фајлови и модели зафаќаат многу простор.</div>
                                 </div>
-                                <div class="product-card">
-                                    <div class="imagewrapper">
-                                        <img src="laptop.png" alt="" class="photoimg" style="max-width: 90%;">
-                                    </div>
-                                    <div class="productTitle">Lenovo IdeaPad 3</div>
-                                    <div class="cenarow">
-                                        <div class="cenakey">haPPy цена:</div>
-                                        <div class="cena">21,999 ден</div>
-                                    </div>
-                                    <a href="" class="doznajpoveke">Дознај повеќе</a>
+                                <div class="rodovi">
+                                  <div class="prashanje">Графичка поддршка</div>
+                                  <div class="odgovor">Доколку работиш со рендерирање, гледај уред со дискретна графичка картичка или барем моќна интегрирана графика.</div>
                                 </div>
-                            </div>    
+                                <div class="rodovi">
+                                  <div class="prashanje">Екран</div>
+                                  <div class="odgovor">Големина и резолуција што дозволуваат прецизност — на пример FHD или покачена резолуција, и добар квалитет на приказ.</div>
+                                </div>  
                             </div>
                             
                             <div id="tab2" class="tab-content">
-                              Content for Tab 2
+                              <div class="rodovi">
+                                <div class="prashanje">Препорачан процесор</div>
+                                <div class="odgovor">Intel Core i5 може да биде доволен за полесни задачи, но за професионален дизајн е препорачано Intel Core i7 или AMD Ryzen 7.</div>
+                              </div>
+                              <div class="rodovi">
+                                <div class="prashanje">RAM меморија</div>
+                                <div class="odgovor">Минимум 16 GB за да можеш без застој да работиш со Adobe пакети, многу слоеви и големи фајлови.</div>
+                              </div>
+                              <div class="rodovi">
+                                <div class="prashanje">Складиште</div>
+                                <div class="odgovor">SSD од најмалку 512 GB — според препораките, 256 GB е премин но 512 GB е побезбеден избор.</div>
+                              </div>
+                              <div class="rodovi">
+                                <div class="prashanje">Екран</div>
+                                <div class="odgovor">Барај панел со добра точност на боите (например IPS, OLED) и доволна површина за дизајн-работа.</div>
+                              </div>
+                              
                             </div>
                             <div id="tab3" class="tab-content">
-                              Content for Tab 3
+                              <div class="rodovi">
+                                <div class="prashanje">Препорачан процесор</div>
+                                <div class="odgovor">За програмски проекти, виртуелни машини, IDE и компајлирање — препорачано е Intel Core i5 или Ryzen 5 како основа, но i7 / Ryzen 7 ако задачите се побаруваат.</div>
+                              </div>
+                              <div class="rodovi">
+                                <div class="prashanje">RAM меморија</div>
+                                <div class="odgovor">Оптимално 16 GB, бидејќи ќе имаш IDE, база на податоци, веб прелистувач со многу табови и можеби емулатори.</div>
+                              </div>
+                              <div class="rodovi">
+                                <div class="prashanje">Складиште</div>
+                                <div class="odgovor">SSD со капацитет 512 GB или повеќе за да можеш да складираш проекти, библиотеки.</div>
+                              </div>
+                              <div class="rodovi">
+                                <div class="prashanje">Стабилност и надградливост</div>
+                                <div class="odgovor">Избери уред кој овозможува проширување на RAM или складиште доколку проектите растат.</div>
+                              </div>
                             </div>
                             <div id="tab4" class="tab-content">
-                              Content for Tab 4
+                              <div class="rodovi">
+                                <div class="prashanje">Препорачан процесор</div>
+                                <div class="odgovor">Intel Core i5 или AMD Ryzen 5 се сосема добри за аналитика, презентации, документи – но ако работиш со комплексни модели или анализа, размисли за i7 / Ryzen 7.</div>
+                              </div>
+                              <div class="rodovi">
+                                <div class="prashanje">RAM меморија</div>
+                                <div class="odgovor">8 GB би било минимално, но 16 GB е препорачано за побезбедна работа и мултитаскинг. </div>
+                              </div>
+                              <div class="rodovi">
+                                <div class="prashanje">Складиште</div>
+                                <div class="odgovor">SSD од најмалку 256-512 GB за да имаш простор за документи, анализи, презентации.</div>
+                              </div>
+                              <div class="rodovi">
+                                <div class="prashanje">Преносливост</div>
+                                <div class="odgovor">Лесен и пренослив уред кој можеш да го носиш на предавања и терен — добро решение за секојдневна употреба.</div>
+                              </div>
                             </div>
-                            <div id="tab5" class="tab-content">
-                              Content for Tab 5
-                            </div>
+                            
                           </div>
                           <div class="povekjeinformacikalk">
-                            <div class="leftist">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum velit recusandae voluptas, autem laboriosam alias cum ut ex officiis tempore aliquam explicabo eius? Debitis minima numquam omnis sit, vitae, ex eveniet distinctio quasi minus autem, laudantium corporis voluptas obcaecati nemo id qui ipsum officiis pariatur architecto iusto. Iure, voluptatum hic.
+                            <div class="leftist">Разгледај ја целата наша понуда и пронајди го уредот кој најдобро одговара на твојата насока и стил на студии
                                 <a href="" class="doznajpoveke" style="margin-top: 30px;">Види понуди</a>
                             </div>
                             <div class="rightist">
@@ -669,7 +688,7 @@
                                     </div>
                                   
                                     <div class="doplata-row">
-                                      <div class="doplata-label">Фиксна вредност</div>
+                                      <div class="doplata-label">Студентски ваучер</div>
                                       <input
                                         class="doplata-fixed"
                                         type="text"
@@ -681,9 +700,7 @@
                                     <div id="doplataResult" class="doplata-result">
                                       Доплата само од: <span>0 ден</span>
                                     </div>
-                                    <div class="doplata-helper">
-                                      Формула: вкупна цена − 15.300 ден
-                                    </div>
+                                    
                                   </div>
                                   
                             </div>
@@ -717,7 +734,7 @@
     
     // Setup both accordions
     setupAccordion('toggleBtn1', 'contentBox1', 'iconBtn1', 'arrowIcon1');
-    setupAccordion('toggleBtn2', 'contentBox2', 'iconBtn2', 'arrowIcon2');
+    
 
     function initTabs() {
     const buttons = document.querySelectorAll('.tab-button');
